@@ -156,8 +156,25 @@ footer div.ficon{
 
 
 
-/* ==============tablet screen setting============ */
-@media screen and (max-width: 768px) {
+
+/* ==============mobile screen setting============ */
+
+
+
+  /* Extra Large devices (large desktops) */
+  @media only screen and (min-width: 1200px) {
+    /* Your CSS styles for extra large screens go here */
+  }
+  
+  
+  /* Large devices (desktops) */
+  @media only screen and (min-width: 992px) and (max-width: 1199.99px) {
+    /* Your CSS styles for large screens go here */
+  }
+
+  
+  /* Medium devices (desktops) */
+  @media only screen and (min-width: 768px) and (max-width: 991.99px) {
     header{
         justify-content: space-around;
     }    
@@ -166,9 +183,13 @@ footer div.ficon{
     }        
     
     main div.container{
-    width: 70%!important;
-    margin: auto;
-}
+        max-width: 80%!important;
+        min-height: 250px;
+        align-items: center;
+    }
+    main div.container h1{
+        text-align: center;
+    }
 div.list{
     width: 100%;
 }    
@@ -184,12 +205,48 @@ div.img img{
 }
 footer{
     flex-direction: column;
-    }   
+    }
+  }
+  
+  /* Small devices (tablets) */
+  @media only screen and (min-width: 576px) and (max-width: 767.99px) {
+    header{
+        justify-content: space-around;
+    }    
+    header div.menu{
+        display: none;
+    }        
+    
+    main div.container{
+        max-width: 80%!important;
+        min-height: 250px;
+        align-items: center;
+    }
+    main div.container h1{
+        text-align: center;
+    }
+div.list{
+    width: 100%;
 }    
+div.list ul{
+    justify-content: center;
+}
 
+div.img{
+    flex-wrap: wrap;
+}
+div.img img{
+    padding: 5px 0px;
+}
+footer{
+    flex-direction: column;
+    }
+  }
+  
 
-/* ==============mobile screen setting============ */
-@media screen and (max-width: 426px) {
+  
+/* Extra Small devices (phones) */
+@media only screen and (max-width: 575.98px) {
     header{
         justify-content: space-between;
     }
@@ -197,16 +254,28 @@ footer{
         display: none;
     }    
     main div.container{
-        width: 100%!important;
-        margin: auto;
+        max-width: 100%!important;
+        align-items: center;
+        min-height: 100px;
+    }
+    main div.container h1{
+        font-size: 22px;
+        text-align: center;
+        
+    }
+    main{
+        width: 100%;
     }
     div.list ul{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0px;
+        padding: 0px;
     }
     div.list ul li{
         text-align: center;
+        padding: 5px;
     }
     div.img{
         flex-wrap: wrap;
@@ -222,4 +291,4 @@ footer{
         padding: 20px 0px;  
     
 }
-}
+  }
